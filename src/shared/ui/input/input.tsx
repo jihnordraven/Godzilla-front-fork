@@ -6,9 +6,9 @@ import { Typography } from '../typography'
 
 import styles from './input.module.scss'
 
-import { Eye } from '@/ui/icons/eye'
-import { EyeClosed } from '@/ui/icons/eye-closed'
-import { SearchIcon } from '@/ui/icons/search-icon'
+import { Eye } from '@/shared/assets/icons/eye'
+import { EyeClosed } from '@/shared/assets/icons/eye-closed'
+import { SearchIcon } from '@/shared/assets/icons/search-icon'
 
 export type InputPropsType = {
   label?: string

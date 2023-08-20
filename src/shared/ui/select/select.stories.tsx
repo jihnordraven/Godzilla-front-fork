@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import type { Meta } from '@storybook/react'
 
-import { Select, SelectProps } from './index'
+import { Select, SelectProps } from './select'
 
 export default {
   title: 'Components/Select',

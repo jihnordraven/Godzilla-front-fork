@@ -4,7 +4,7 @@ import { Typography } from '../typography'
 
 import { Button } from './index'
 
-import { LogOutIcon } from '@/ui/icons/log-out-icon'
+import { LogOutIcon } from '@/shared/assets/icons/log-out-icon'
 
 const meta = {
   title: 'Components/Button',

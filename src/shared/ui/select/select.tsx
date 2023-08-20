@@ -7,7 +7,7 @@ import { Typography } from '../typography'
 
 import style from './select.module.scss'
 
-import { ArrowDownIcon } from '@/ui/icons/arrow-down'
+import { ArrowDownIcon } from '@/shared/assets/icons/arrow-down'
 
 export type Option = { label: string; value: string }
 

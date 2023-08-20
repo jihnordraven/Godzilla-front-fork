@@ -6,7 +6,7 @@ import { Typography } from '../typography'
 
 import styles from './checkbox.module.scss'
 
-import { Check } from '@/ui/icons/check'
+import { Check } from '@/shared/assets/icons/check'
 
 export type CheckboxProps = {
   className?: string
