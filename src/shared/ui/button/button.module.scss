@@ -1,4 +1,6 @@
-@import '@/shared/ui/typography/typography.module';
+// ловим ошибку, если указать без расширения. Нужно разобраться
+/* stylelint-disable-next-line scss/at-import-partial-extension */
+@import '@/shared/ui/typography/typography.module.scss';
 
 @mixin button-mixin() {
   @include typography-mixin(var(--font-size-s), var(--line-height-m), var(--font-weight-bold));

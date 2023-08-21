@@ -1,10 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Typography } from '../typography'
-
-import { Button } from './index'
+import { Button } from './button'
 
 import { LogOutIcon } from '@/shared/assets/icons/log-out-icon'
+import { Typography } from '@/shared/ui/typography'
 
 const meta = {
   title: 'Components/Button',
