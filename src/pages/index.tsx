@@ -1,22 +1,8 @@
-import { useState } from 'react'
-
-import { Inter } from 'next/font/google'
 import Head from 'next/head'
 
-import styles from './home.module.scss'
-
-import { Button } from '@/shared/ui/button'
-import { CheckboxItem } from '@/shared/ui/checkbox'
-import { Input } from '@/shared/ui/input'
-import { Select } from '@/shared/ui/select'
-import { Typography } from '@/shared/ui/typography'
-
-const inter = Inter({ subsets: ['latin'] })
+import cls from './home.module.scss'
 
 export default function Home() {
-  const [isChecked, setIsChecked] = useState(false)
-  const [inputValue, setInputValue] = useState('')
-
   return (
     <>
       <Head>
@@ -25,13 +11,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
-        <Button>Test</Button>
-        <Select value="Test" options={[{ label: 'Test', value: 'test' }]} onChange={() => {}} />
-        <CheckboxItem checked={isChecked} id="test" onChange={setIsChecked} />
-        <Input value={inputValue} onChangeValue={setInputValue} placeholder="Test input" />
-        <Typography>Test Typography</Typography>
-      </main>
+      <h3>Home</h3>
     </>
   )
 }

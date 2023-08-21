@@ -1,0 +1,28 @@
+.sidebar {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: 104px;
+
+  width: var(--sidebar-width);
+  height: var(--content-height);
+  padding: 75px 16px 0 63px;
+
+  color: white;
+
+  background-color: var(--dark-darkest);
+  border-right: solid 1px var(--dark-light);
+}
+
+.sidebarFooter {
+  position: absolute;
+  bottom: 36px;
+
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  font: var(--font-s);
+}

@@ -36,8 +36,7 @@
   /* large */
   --font-size-large: 26px;
   --font-line-large: 36px;
-  --font-large: var(--bold-weight) var(--font-size-large) / var(--font-line-large)
-    var(--font-family-text);
+  --font-large: var(--font-size-large) / var(--font-line-large) var(--font-family-text);
 
   /* COLORS */
 
@@ -153,10 +152,10 @@
   /* SIZES */
 
   /* page */
-  --content-height: calc(100vh - var(--navbar-height));
+  --content-height: calc(100vh - var(--header-height));
 
-  /* navbar */
-  --navbar-height: 60px;
+  /* header */
+  --header-height: 60px;
 
   /* sidebar */
   --sidebar-width: 220px;
