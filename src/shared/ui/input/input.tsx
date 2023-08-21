@@ -17,7 +17,7 @@ export type InputPropsType = {
   type?: string
   error?: string
   searchInput?: boolean
-  onValueChange?: (value: string) => void
+  onChangeValue?: (value: string) => void
   width?: string
 } & ComponentPropsWithoutRef<'input'>
 
@@ -32,7 +32,7 @@ export const Input = forwardRef<HTMLInputElement, InputPropsType>(
       placeholder,
       disabled,
       onChange,
-      onValueChange,
+      onChangeValue,
       type,
       width,
       label,
@@ -54,7 +54,7 @@ export const Input = forwardRef<HTMLInputElement, InputPropsType>(
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       onChange?.(e)
-      onValueChange?.(e.target.value)
+      onChangeValue?.(e.target.value)
     }
 
     return (

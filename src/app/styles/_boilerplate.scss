@@ -28,21 +28,6 @@ option {
   color: inherit;
 }
 
-input:-webkit-autofill {
-  -webkit-background-clip: text;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-
-  font-family: var(--font-family-primary), sans-serif;
-  line-height: var(--line-height-m);
-  color: var(--color-light-100);
-
-  background-color: var(--color-dark-900);
-}
-
 input,
 button,
 select,
@@ -56,15 +41,6 @@ option {
   color: inherit;
 }
 
-button {
-  background: none;
-  border: none;
-
-  &:hover {
-    border: none;
-  }
-}
-
 input {
   background: none;
   border: none;
@@ -76,8 +52,32 @@ input {
   }
 }
 
+input:-webkit-autofill {
+  background-clip: text;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: var(--font-family-primary), sans-serif;
+  line-height: var(--line-height-m);
+  color: var(--color-light-100);
+
+  background-color: var(--color-dark-900);
+}
+
 p,
 button {
   margin: 0;
   padding: 0;
+}
+
+button {
+  background: none;
+  border: none;
+
+  &:hover {
+    border: none;
+  }
 }

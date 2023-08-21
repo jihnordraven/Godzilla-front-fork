@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Inter } from 'next/font/google'
 import Head from 'next/head'
 
-import styles from './home.module.css'
+import styles from './home.module.scss'
 
 import { Button } from '@/shared/ui/button'
 import { CheckboxItem } from '@/shared/ui/checkbox'
@@ -29,7 +29,7 @@ export default function Home() {
         <Button>Test</Button>
         <Select value="Test" options={[{ label: 'Test', value: 'test' }]} onChange={() => {}} />
         <CheckboxItem checked={isChecked} id="test" onChange={setIsChecked} />
-        <Input value={inputValue} onValueChange={setInputValue} placeholder="Test input" />
+        <Input value={inputValue} onChangeValue={setInputValue} placeholder="Test input" />
         <Typography>Test Typography</Typography>
       </main>
     </>
