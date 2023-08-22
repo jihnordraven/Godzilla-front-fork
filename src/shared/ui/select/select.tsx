@@ -5,7 +5,7 @@ import { clsx } from 'clsx'
 
 import { Typography } from '../typography'
 
-import style from './select.module.scss'
+import cls from './select.module.scss'
 
 import { ArrowDownIcon } from '@/shared/assets/icons/arrow-down'
 
@@ -52,16 +52,16 @@ export const Select: FC<SelectProps> = ({
   const classNames = {
     root: rootClassName,
     trigger: clsx(
-      style.trigger,
-      style[variant],
-      showError && style.error,
-      secondary && style.secondary,
+      cls.trigger,
+      cls[variant],
+      showError && cls.error,
+      secondary && cls.secondary,
       className
     ),
-    icon: clsx(style.icon, style[variant]),
-    item: clsx(style.item, style[variant]),
-    content: clsx(style.content, style[variant]),
-    label: clsx(style.label, disabled && style.disabled),
+    icon: clsx(cls.icon, cls[variant]),
+    item: clsx(cls.item, cls[variant]),
+    content: clsx(cls.content, cls[variant]),
+    label: clsx(cls.label, disabled && cls.disabled),
   }
   const withoutPlaceholder = variant === 'pagination' ? value : 'Select Box'
   const rootStyles = { width }

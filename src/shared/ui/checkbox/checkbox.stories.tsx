@@ -21,25 +21,23 @@ export const Main: Story = {
 }
 export const CheckboxControlled: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState(true)
     const onChange = (value: boolean) => {
       setValue(value)
     }
 
-    return <CheckboxItem checked={value} onChange={onChange} />
+    return <CheckboxItem checked={value} onValueChange={onChange} />
   },
   args: {},
 }
 export const CheckboxControlledWithLabel: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState(true)
     const onChange = (value: boolean) => {
       setValue(value)
     }
 
-    return <CheckboxItem label="Click me" checked={value} onChange={onChange} />
+    return <CheckboxItem label="Click me" checked={value} onValueChange={onChange} />
   },
   args: { label: 'Click me' },
 }

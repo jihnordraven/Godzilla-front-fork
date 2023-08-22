@@ -35,7 +35,6 @@ export const InputWithPlaceHolder: Story = {
 }
 export const InputPassword: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState('')
     const onChange = (event: ChangeEvent<HTMLInputElement>) => {
       setValue(event.currentTarget.value)
@@ -53,7 +52,6 @@ export const InputPassword: Story = {
 
 export const InputWithPlaceHolderAndSearch: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState('')
     const onChange = (event: ChangeEvent<HTMLInputElement>) => {
       setValue(event.currentTarget.value)
