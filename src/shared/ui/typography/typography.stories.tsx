@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Typography } from './typography'
 
 const meta = {
-  title: 'Components/Typography1',
+  title: 'Components/Typography',
   component: Typography,
   tags: ['autodocs'],
   argTypes: {
