@@ -2,8 +2,8 @@
 import type { AppProps } from 'next/app'
 
 import '@/app/styles/index.scss'
-import { Header } from './ui/header'
-import { Sidebar } from './ui/sidebar'
+import { Header } from '@/widgets/header'
+import { Sidebar } from '@/widgets/sidebar'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
