@@ -1,6 +1,16 @@
+import { BACK_URL } from './src/shared/consts/global'
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
   reactStrictMode: true,
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: `${BACK_URL}/:path*`,
+      },
+    ]
+  },
   // webpack(config) {
   //   const fileLoaderRule = config.module.rules.find(rule => rule.test?.test?.('.svg'))
   //
