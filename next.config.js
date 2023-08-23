@@ -1,4 +1,4 @@
-import { BACK_URL } from './src/shared/consts/global'
+const { BACK_URL } = require('./src/shared/consts/global')
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
