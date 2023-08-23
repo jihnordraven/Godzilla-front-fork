@@ -1,5 +1,11 @@
+import { PageWrapper } from '@/shared/ui/page-wrapper'
+
 const Favorites: React.FC = () => {
-  return <h3>Favorites</h3>
+  return (
+    <PageWrapper>
+      <h3>Favorites</h3>
+    </PageWrapper>
+  )
 }
 
 export default Favorites

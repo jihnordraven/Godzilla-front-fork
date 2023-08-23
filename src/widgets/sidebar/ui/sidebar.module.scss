@@ -1,5 +1,6 @@
 .sidebar {
-  position: relative;
+  position: sticky;
+  top: var(--header-footer-height);
 
   display: flex;
   flex-direction: column;
@@ -25,4 +26,12 @@
   align-items: center;
 
   font-size: var(--font-size-xs);
+}
+
+// определиться с адаптивом и вынести в глобальные переменные
+
+@media screen and (width <= 767px) {
+  .sidebar {
+    display: none;
+  }
 }

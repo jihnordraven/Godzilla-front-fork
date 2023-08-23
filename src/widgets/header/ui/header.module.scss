@@ -1,9 +1,12 @@
 .header {
+  position: sticky;
+  top: 0;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  height: var(--header-height);
+  height: var(--header-footer-height);
   padding: 0 64px 0 60px;
 
   color: var(--light-lightest);
@@ -22,4 +25,12 @@
   display: flex;
   gap: 48px;
   align-items: center;
+}
+
+// определиться с адаптивом и вынести в глобальные переменные
+
+@media screen and (width <= 767px) {
+  .sidebar {
+    display: none;
+  }
 }

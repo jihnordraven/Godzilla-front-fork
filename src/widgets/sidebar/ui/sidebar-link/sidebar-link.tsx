@@ -8,9 +8,9 @@ export const SidebarLink: React.FC<SidebarItemType> = props => {
   const { path, text, Icon } = props
 
   return (
-    <div className={cls.sidebarLink}>
+    <ActiveLink className={cls.sidebarLink} href={path}>
       <Icon />
-      <ActiveLink href={path}>{text}</ActiveLink>
-    </div>
+      {text}
+    </ActiveLink>
   )
 }

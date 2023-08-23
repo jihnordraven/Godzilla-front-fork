@@ -1,9 +1,7 @@
-// временный код, нужно создать layout
 import type { AppProps } from 'next/app'
 import { Inter } from 'next/font/google'
 
-import { Header } from '@/widgets/header'
-import { Sidebar } from '@/widgets/sidebar'
+import { MainLayout } from '@/widgets/main-layout'
 
 import '@/app/styles/index.scss'
 
@@ -15,16 +13,8 @@ const inter = Inter({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className="main">
-      <div className={inter.className}>
-        <Header />
-        <div className="flex-container">
-          <Sidebar />
-          <div className="content-wrapper">
-            <Component {...pageProps} />
-          </div>
-        </div>
-      </div>
-    </main>
+    <MainLayout className={inter.className}>
+      <Component {...pageProps} />
+    </MainLayout>
   )
 }

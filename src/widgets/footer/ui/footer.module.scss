@@ -1,0 +1,14 @@
+.footer {
+  position: sticky;
+  bottom: 0;
+  height: var(--header-footer-height);
+  border-top: solid 1px var(--dark-light);
+}
+
+// определиться с адаптивом и вынести в глобальные переменные
+
+@media screen and (width > 767px) {
+  .footer {
+    display: none;
+  }
+}

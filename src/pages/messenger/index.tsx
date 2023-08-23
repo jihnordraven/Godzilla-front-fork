@@ -1,5 +1,11 @@
+import { PageWrapper } from '@/shared/ui/page-wrapper'
+
 const Messenger: React.FC = () => {
-  return <h3>Messenger</h3>
+  return (
+    <PageWrapper>
+      <h3>Messenger</h3>
+    </PageWrapper>
+  )
 }
 
 export default Messenger

@@ -1,5 +1,11 @@
+import { PageWrapper } from '@/shared/ui/page-wrapper'
+
 const Profile: React.FC = () => {
-  return <h3>Profile</h3>
+  return (
+    <PageWrapper>
+      <h3>Profile</h3>
+    </PageWrapper>
+  )
 }
 
 export default Profile

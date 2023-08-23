@@ -1,5 +1,11 @@
+import { PageWrapper } from '@/shared/ui/page-wrapper'
+
 const Statistic: React.FC = () => {
-  return <h3>Statistic</h3>
+  return (
+    <PageWrapper>
+      <h3>Statistic</h3>
+    </PageWrapper>
+  )
 }
 
 export default Statistic

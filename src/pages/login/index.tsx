@@ -1,5 +1,11 @@
+import { PageWrapper } from '@/shared/ui/page-wrapper'
+
 const Login: React.FC = () => {
-  return <h3>Login</h3>
+  return (
+    <PageWrapper>
+      <h3>Log in</h3>
+    </PageWrapper>
+  )
 }
 
 export default Login
