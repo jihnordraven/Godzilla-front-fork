@@ -1,14 +1,18 @@
 import { useState } from 'react'
 
 import type { Meta } from '@storybook/react'
+import { StoryObj } from '@storybook/react'
 
 import { Select, SelectProps } from './select'
+
+import meta from '@/shared/ui/input/input.stories'
 
 export default {
   title: 'Components/Select',
   component: Select,
   tags: ['autodocs'],
 } satisfies Meta<typeof Select>
+type Story = StoryObj<typeof meta>
 
 const optionsPrimary = [
   {
@@ -47,76 +51,69 @@ const optionsPagination = [
   },
 ]
 
-export const Simple = {
-  render: (args: SelectProps) => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [value, setValue] = useState('')
+const SimpleSelect = (args: SelectProps) => {
+  const [value, setValue] = useState('')
 
-    return <Select {...args} value={value} onChange={setValue} />
-  },
-
-  args: {
-    options: optionsPrimary,
-  },
+  return <Select {...args} value={value} onChange={setValue} />
 }
 
-export const SimpleWithLabel = {
-  render: (args: SelectProps) => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [value, setValue] = useState('')
-
-    return <Select {...args} value={value} onChange={setValue} />
-  },
-
-  args: {
-    placeholder: 'select...',
-    options: optionsPrimary,
-    label: 'Select',
-  },
+export const SimpleSelectStory: Story = {
+  render: () => <SimpleSelect value="" onChange={() => {}} options={optionsPrimary} />,
 }
 
-export const Error = {
-  render: (args: SelectProps) => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [value, setValue] = useState('')
+const SimpleWithLabel = (args: SelectProps) => {
+  const [value, setValue] = useState('')
 
-    return <Select {...args} value={value} onChange={setValue} />
-  },
-
-  args: {
-    placeholder: 'select...',
-    options: optionsPrimary,
-    label: 'Select',
-    errorMessage: 'error',
-  },
-}
-export const Pagination = {
-  render: (args: SelectProps) => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [value, setValue] = useState('')
-
-    return <Select {...args} value={value} onChange={setValue} />
-  },
-
-  args: {
-    options: optionsPagination,
-    label: 'pagination',
-    variant: 'pagination',
-    placeholder: '1',
-  },
+  return <Select {...args} value={value} onChange={setValue} />
 }
 
-export const FullWidth = {
-  render: (args: SelectProps) => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [value, setValue] = useState('')
+export const SimpleWithLabelStory: Story = {
+  render: () => <SimpleWithLabel value="" onChange={() => {}} options={optionsPrimary} />,
+}
 
-    return <Select {...args} value={value} onChange={setValue} />
-  },
+const Error = (args: SelectProps) => {
+  const [value, setValue] = useState('')
 
-  args: {
-    options: optionsPrimary,
-    variant: 'primary',
-    width: '100%',
-  },
+  return <Select {...args} value={value} onChange={setValue} />
+}
+
+export const ErrorStory: Story = {
+  render: () => <Error value="" onChange={() => {}} options={optionsPrimary} />,
+}
+
+const PaginationSelect = (args: SelectProps) => {
+  const [value, setValue] = useState('')
+
+  return <Select {...args} value={value} onChange={setValue} />
+}
+
+export const PaginationSelectStory: Story = {
+  render: () => <PaginationSelect value="" onChange={() => {}} options={optionsPrimary} />,
+}
+
+const FullWidth = (args: SelectProps) => {
+  const [value, setValue] = useState('')
+
+  return (
+    <Select
+      label="pagination"
+      placeholder="1"
+      variant="pagination"
+      {...args}
+      value={value}
+      onChange={setValue}
+    />
+  )
+}
+
+export const FullWidthStory: Story = {
+  render: () => (
+    <FullWidth
+      width={'100%'}
+      variant="primary"
+      value=""
+      onChange={() => {}}
+      options={optionsPrimary}
+    />
+  ),
 }
