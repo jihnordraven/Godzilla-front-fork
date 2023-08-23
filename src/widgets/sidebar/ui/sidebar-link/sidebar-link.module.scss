@@ -6,3 +6,8 @@
   font-size: var(--font-size-xs);
   text-decoration: none;
 }
+
+.active {
+  font-weight: var(--font-weight-bold);
+  color: var(--accent-color);
+}

@@ -1,8 +1,8 @@
-import Link from 'next/link'
-
 import { SidebarItemType } from '../../model/types/sidebar-link'
 
 import cls from './sidebar-link.module.scss'
+
+import { ActiveLink } from '@/shared/ui/active-link'
 
 export const SidebarLink: React.FC<SidebarItemType> = props => {
   const { path, text, Icon } = props
@@ -10,7 +10,7 @@ export const SidebarLink: React.FC<SidebarItemType> = props => {
   return (
     <div className={cls.sidebarLink}>
       <Icon />
-      <Link href={path}>{text}</Link>
+      <ActiveLink href={path}>{text}</ActiveLink>
     </div>
   )
 }

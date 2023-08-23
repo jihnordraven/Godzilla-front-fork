@@ -1,10 +1,10 @@
-import Link from 'next/link'
-
 import { sidebarLinkList } from '../model/const/sidebar-link-props'
 
 import { SidebarLinkGroup } from './sidebar-link-group/sidebar-link-group'
 import cls from './sidebar.module.scss'
 
+import { getLoginRoute } from '@/shared/consts/route-paths'
+import { ActiveLink } from '@/shared/ui/active-link'
 import { Blank } from '@/shared/ui/blank'
 
 export const Sidebar = (props: any) => {
@@ -15,7 +15,7 @@ export const Sidebar = (props: any) => {
       ))}
       <div className={cls.sidebarFooter}>
         <Blank />
-        <Link href={'login'}>Log in</Link>
+        <ActiveLink href={getLoginRoute()}>Log in</ActiveLink>
       </div>
     </aside>
   )
