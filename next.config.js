@@ -1,4 +1,3 @@
-const { BACK_URL } = require('./src/shared/consts/global')
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
@@ -7,7 +6,7 @@ const nextConfig = {
     return [
       {
         source: '/api/:path*',
-        destination: `${BACK_URL}/:path*`,
+        destination: 'https://godzillagram.com/api/:path*',
       },
     ]
   },
