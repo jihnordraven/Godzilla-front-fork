@@ -33,40 +33,29 @@ export const InputWithPlaceHolder: Story = {
     placeholder: 'Type Something',
   },
 }
-export const InputPassword: Story = {
-  render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [value, setValue] = useState('')
-    const onChange = (event: ChangeEvent<HTMLInputElement>) => {
-      setValue(event.currentTarget.value)
-    }
 
-    return <Input type={'password'} onChange={onChange} value={value} />
-  },
-  args: {
-    value: '',
-    label: 'Click here',
-    type: 'password',
-    disabled: false,
-  },
+const InputPassword = () => {
+  const [value, setValue] = useState('')
+  const onChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setValue(event.currentTarget.value)
+  }
+
+  return <Input type="password" label="Click here" value={value} onChange={onChange} />
 }
 
-export const InputWithPlaceHolderAndSearch: Story = {
-  render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [value, setValue] = useState('')
-    const onChange = (event: ChangeEvent<HTMLInputElement>) => {
-      setValue(event.currentTarget.value)
-    }
+export const Password: Story = {
+  render: () => <InputPassword />,
+}
 
-    return <Input searchInput={true} onChange={onChange} value={value} />
-  },
-  args: {
-    value: 'Simple input',
-    label: 'Click here',
-    type: 'text',
-    placeholder: 'Placeholder',
-    searchInput: true,
-    disabled: false,
-  },
+const InputWithPlaceHolderAndSearch = () => {
+  const [value, setValue] = useState('')
+  const onChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setValue(event.currentTarget.value)
+  }
+
+  return <Input searchInput={true} placeholder={'Placeholder'} onChange={onChange} value={value} />
+}
+
+export const InputPlaceHolderAndSearch: Story = {
+  render: () => <InputWithPlaceHolderAndSearch />,
 }

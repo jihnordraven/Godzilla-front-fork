@@ -1,8 +1,10 @@
-import { useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { Pagination } from './'
+
+import { Input } from '@/shared/ui/input'
 
 const meta = {
   title: 'Components/Pagination',
@@ -22,28 +24,32 @@ export const PaginationMain: Story = {
     perPageOptions: [5, 10, 15],
   },
 }
-export const PaginationWithControl: Story = {
-  render: () => {
-    const [page, setPage] = useState(5)
-    const [count, setCount] = useState(10)
-    const onChangePage = (value: number) => {
-      setPage(value)
-    }
-    const onChangeCount = (value: string) => {
-      setCount(+value)
-    }
 
-    return (
-      <Pagination
-        page={page}
-        count={count}
-        onChange={onChangePage}
-        onPerPageChange={onChangeCount}
-        perPage={count}
-        perPageOptions={[5, 10, 50]}
-      />
-    )
-  },
+const PaginationWithControl = () => {
+  const [page, setPage] = useState(5)
+  const [count, setCount] = useState(10)
+
+  const onChangePage = (value: number) => {
+    setPage(value)
+  }
+  const onChangeCount = (value: string) => {
+    setCount(+value)
+  }
+
+  return (
+    <Pagination
+      page={page}
+      count={count}
+      onChange={onChangePage}
+      onPerPageChange={onChangeCount}
+      perPage={count}
+      perPageOptions={[5, 10, 50]}
+    />
+  )
+}
+
+export const PaginationWithControls: Story = {
+  render: () => <PaginationWithControl />,
   args: {
     count: 10,
     page: 1,
