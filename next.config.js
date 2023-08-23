@@ -1,6 +1,15 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
   reactStrictMode: true,
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: 'https://godzillagram.com/api/:path*',
+      },
+    ]
+  },
   // webpack(config) {
   //   const fileLoaderRule = config.module.rules.find(rule => rule.test?.test?.('.svg'))
   //

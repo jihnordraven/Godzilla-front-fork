@@ -1,0 +1,14 @@
+.selectBox {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  // color: var(--color-light-100);
+  color: #312f2f;
+}
+
+.select {
+  flex-shrink: 0;
+
+  // color: var(--color-light-100);
+}
