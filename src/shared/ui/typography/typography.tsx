@@ -1,6 +1,6 @@
 import { ComponentPropsWithoutRef, ElementType } from 'react'
 
-import s from './typography.module.scss'
+import cls from './typography.module.scss'
 
 export type TypographyProps<T extends ElementType = 'p'> = {
   as?: T
@@ -27,5 +27,5 @@ export const Typography = <T extends ElementType = 'p'>(
 ) => {
   const { variant = 'body1', color = 'inherit', className, as: Component = 'p', ...rest } = props
 
-  return <Component className={`${s[variant]} ${s[color]} ${className ?? ''}`} {...rest} />
+  return <Component className={`${cls[variant]} ${cls[color]} ${className ?? ''}`} {...rest} />
 }

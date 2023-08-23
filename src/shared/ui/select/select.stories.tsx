@@ -72,9 +72,10 @@ export const SimpleWithLabelStory: Story = {
 }
 
 const Error = (args: SelectProps) => {
+  const { value: mockValue, onChange, ...restProps } = args
   const [value, setValue] = useState('')
 
-  return <Select {...args} value={value} onChange={setValue} />
+  return <Select {...restProps} value={value} onChange={setValue} />
 }
 
 export const ErrorStory: Story = {

@@ -26,6 +26,7 @@ export const MainInput: Story = {
     disabled: false,
   },
 }
+
 export const InputWithPlaceHolder: Story = {
   args: {
     label: 'Click here',
