@@ -1,5 +1,5 @@
 @mixin typography-mixin($fS, $lH, $fW) {
-  font-family: var(--font-family-primary);
+  font-family: var(--font-family-text);
   font-size: $fS;
   font-weight: $fW;
   line-height: $lH;
@@ -17,52 +17,52 @@
 }
 
 .h1 {
-  @include typography-mixin(var(--font-size-xl), var(--line-height-l), var(--font-weight-bold));
+  @include typography-mixin(var(--font-size-xl), var(--font-line-l), var(--weight-bold));
 }
 
 .h2 {
-  @include typography-mixin(var(--font-size-l), var(--line-height-m), var(--font-weight-bold));
+  @include typography-mixin(var(--font-size-l), var(--font-line-m), var(--weight-bold));
 }
 
 .h3 {
-  @include typography-mixin(var(--font-size-m), var(--line-height-m), var(--font-weight-bold));
+  @include typography-mixin(var(--font-size-m), var(--font-line-m), var(--weight-bold));
 }
 
 .large {
-  @include typography-mixin(var(--font-size-xxl), var(--line-height-l), var(--font-weight-bold));
+  @include typography-mixin(var(--font-size-xxl), var(--font-line-l), var(--weight-bold));
 }
 
 .body1 {
-  @include typography-mixin(var(--font-size-m), var(--line-height-m), var(--font-weight-regular));
+  @include typography-mixin(var(--font-size-m), var(--font-line-m), var(--weight-regular));
 }
 
 .body2 {
-  @include typography-mixin(var(--font-size-s), var(--line-height-m), var(--font-weight-regular));
+  @include typography-mixin(var(--font-size-s), var(--font-line-m), var(--weight-regular));
 }
 
 .subtitle1 {
-  @include typography-mixin(var(--font-size-m), var(--line-height-m), var(--font-weight-bold));
+  @include typography-mixin(var(--font-size-m), var(--font-line-m), var(--weight-bold));
 }
 
 .subtitle2 {
-  @include typography-mixin(var(--font-size-s), var(--line-height-m), var(--font-weight-bold));
+  @include typography-mixin(var(--font-size-s), var(--font-line-m), var(--weight-bold));
 }
 
 .caption {
-  @include typography-mixin(var(--font-size-xs), var(--line-height-s), var(--font-weight-regular));
+  @include typography-mixin(var(--font-size-xs), var(--font-line-s), var(--weight-regular));
 }
 
 .overline {
-  @include typography-mixin(var(--font-size-xs), var(--line-height-s), var(--font-weight-bold));
+  @include typography-mixin(var(--font-size-xs), var(--line-height-s), var(--weight-bold));
 }
 
 .link1 {
-  @include typography-mixin(var(--font-size-s), var(--line-height-m), var(--font-weight-regular));
+  @include typography-mixin(var(--font-size-s), var(--font-line-m), var(--weight-regular));
   @include link;
 }
 
 .link2 {
-  @include typography-mixin(var(--font-size-xs), var(--line-height-s), var(--font-weight-regular));
+  @include typography-mixin(var(--font-size-xs), var(--font-line-s), var(--weight-regular));
   @include link;
 }
 

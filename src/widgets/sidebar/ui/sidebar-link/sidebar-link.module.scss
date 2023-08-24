@@ -3,6 +3,11 @@
   gap: 12px;
   align-items: center;
 
-  font: var(--font-s);
+  font-size: var(--font-size-s);
   text-decoration: none;
+}
+
+.active {
+  font-weight: var(--font-weight-bold);
+  color: var(--accent-color);
 }

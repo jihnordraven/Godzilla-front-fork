@@ -1,5 +1,11 @@
+import { PageWrapper } from '@/widgets/page-wrapper'
+
 const Create: React.FC = () => {
-  return <h3>Create test</h3>
+  return (
+    <PageWrapper>
+      <h3>Create</h3>
+    </PageWrapper>
+  )
 }
 
 export default Create

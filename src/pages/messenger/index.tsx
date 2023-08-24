@@ -1,5 +1,11 @@
+import { PageWrapper } from '@/widgets/page-wrapper'
+
 const Messenger: React.FC = () => {
-  return <h3>Messenger</h3>
+  return (
+    <PageWrapper paddingTop="big">
+      <h3>Messenger</h3>
+    </PageWrapper>
+  )
 }
 
 export default Messenger

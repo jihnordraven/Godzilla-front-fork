@@ -4,14 +4,14 @@ import { clsx } from 'clsx'
 
 import { Typography } from '../typography'
 
-import styles from './checkbox.module.scss'
+import cls from './checkbox.module.scss'
 
 import { Check } from '@/shared/assets/icons/check'
 
 export type CheckboxProps = {
   className?: string
   checked?: boolean
-  onChange?: (checked: boolean) => void
+  onValueChange?: (checked: boolean) => void
   disabled?: boolean
   required?: boolean
   label?: string
@@ -22,7 +22,7 @@ export type CheckboxProps = {
 
 export const CheckboxItem = ({
   checked,
-  onChange,
+  onValueChange,
   disabled,
   required,
   position,
@@ -32,27 +32,27 @@ export const CheckboxItem = ({
   errorMessage,
 }: CheckboxProps) => {
   const classNames = {
-    container: clsx(styles.container, className),
+    container: clsx(cls.container, className),
     buttonWrapper: clsx(
-      styles.buttonWrapper,
-      disabled && styles.disabled,
-      position === 'left' && styles.left
+      cls.buttonWrapper,
+      disabled && cls.disabled,
+      position === 'left' && cls.left
     ),
-    root: styles.root,
-    indicator: styles.indicator,
-    label: clsx(styles.label, disabled && styles.disabled),
+    root: cls.root,
+    indicator: cls.indicator,
+    label: clsx(cls.label, disabled && cls.disabled),
   }
 
   return (
     <>
       <div className={classNames.container}>
         <LabelRadix.Root asChild>
-          <Typography className={styles.wrap} as={'label'} variant="body2">
+          <Typography className={cls.wrap} as={'label'} variant="body2">
             <div className={classNames.buttonWrapper}>
               <CheckboxRadix.Root
                 className={classNames.root}
                 checked={checked}
-                onCheckedChange={onChange}
+                onCheckedChange={onValueChange}
                 disabled={disabled}
                 required={required}
                 id={id}
@@ -69,7 +69,7 @@ export const CheckboxItem = ({
         </LabelRadix.Root>
       </div>
       {errorMessage && (
-        <Typography variant="body2" className={styles.errorMessage}>
+        <Typography variant="body2" className={cls.errorMessage}>
           {errorMessage}
         </Typography>
       )}
