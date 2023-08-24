@@ -1,4 +1,4 @@
-import { PageWrapper } from '@/shared/ui/page-wrapper'
+import { PageWrapper } from '@/widgets/page-wrapper'
 
 const Create: React.FC = () => {
   return (

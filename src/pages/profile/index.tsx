@@ -1,8 +1,8 @@
-import { PageWrapper } from '@/shared/ui/page-wrapper'
+import { PageWrapper } from '@/widgets/page-wrapper'
 
 const Profile: React.FC = () => {
   return (
-    <PageWrapper>
+    <PageWrapper paddingTop="big">
       <h3>Profile</h3>
     </PageWrapper>
   )
